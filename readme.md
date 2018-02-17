@@ -159,3 +159,8 @@ Laravel的优势<br>
 - 配置中国镜像(composer config -g repo.packagist composer https://packagist.phpcomposer.com)
 - 创建laravel项目(composer create-project laravel/laravel laravel54 "5.4.*")
 
+### 启动Laravel
+- Nginx?Apache?(http://d.laravel-china.org/docs/5.4/installation)
+- php artisan serve
+
+
