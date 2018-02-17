@@ -179,3 +179,6 @@ Laravel的优势<br>
 ### chapter4:文章模块
 ![image](https://github.com/15529343201/Jianshu_Laravel_5.4/blob/chapter4/image/l4.PNG)
 
+### Laravel路由
+![image](https://github.com/15529343201/Jianshu_Laravel_5.4/blob/chapter4/image/l5.PNG)
+
