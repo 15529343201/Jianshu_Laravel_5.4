@@ -182,3 +182,14 @@ Laravel的优势<br>
 ### Laravel路由
 ![image](https://github.com/15529343201/Jianshu_Laravel_5.4/blob/chapter4/image/l5.PNG)
 
+http方法:<br>
+```PHP
+Route::get('/', '[控制器]@[行为]');
+Route::put('/posts', '\App\Http\Controllers\PostController@index');
+/*
+<form action="/posts" method="POST">
+  <input type="hidden" name="_method" value="PUT" />
+  {{ method_field("PUT") }} //和上句话等价
+</form>
+*/
+```
