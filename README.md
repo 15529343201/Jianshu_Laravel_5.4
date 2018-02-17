@@ -59,3 +59,59 @@ Laravel的优势<br>
 &emsp;&emsp;1.国际化<br>
 &emsp;&emsp;2.基于laravel的开源项目多<br>
 &emsp;&emsp;3.开源<br>
+
+### chapter3:安装启动Laravel
+### Laravel5.4安装环境要求<br>
+- PHP>=5.6.4
+- PHP扩展<br>
+&emsp;1.OpenSSL PHP Extension<br>
+&emsp;2.PDO PHP Extension<br>
+&emsp;3.Mbstring PHP Extension<br>
+&emsp;4.Tokenizer PHP Extenesion<br>
+&emsp;5.XML PHP Extension<br>
+- Mysql
+
+环境准备<br>
+`yum install -y epel-release`<br>
+`yum install gcc bison bison-devel zlib-devel libmcrypt-devel mcrypt mhash-devel openssl-devel libxml2-devel libcurl-devel bzip2-devel readline-devel libedit-devel sqlite-devel jemalloc jemalloc-devel libmcrypt-devel`<br>
+`cd /usr/local/src`<br>
+`wget http://cn2.php.net/distributions/php-5.6.30.tar.gz`<br>
+`tar zvxf php-5.6.30.tar.gz`<br>
+`cd php-5.6.30`<br>
+`groupadd www`<br>
+`useradd -g www -s /sbin/nologin www`<br>
+
+编译安装<br>
+```
+./configure --prefix=/usr/local/php \
+--with-config-file-path=/usr/local/php/etc \
+--enable-inline-optimization --disable-debug \
+--disable-rpath --enable-shared --enable-opcache \
+--enable-fpm --with-fpm-user=www \
+--with-fpm-group=www \
+--with-mysql=mysqlnd \
+--with-mysqli=mysqlnd \
+--with-pdo-mysql=mysqlnd \
+--with-gettext \
+--enable-mbstring \
+--with-iconv \
+--with-mcrypt \
+--with-mhash \
+--with-openssl \
+--enable-bcmath \
+--enable-soap \
+--with-libxml-dir \
+--enable-pcntl \
+--enable-shmop \
+--enable-sysvmsg \
+--enable-sysvsem \
+--enable-sysvshm \
+--enable-sockets \
+--with-curl --with-zlib \
+--enable-zip \
+--with-bz2 \
+--with-readline
+```<br>
+`make && make install`<br>
+
+
