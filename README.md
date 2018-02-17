@@ -111,7 +111,7 @@ Laravel的优势<br>
 --enable-zip \
 --with-bz2 \
 --with-readline
-```<br>
+```
 `make && make install`<br>
 
 
