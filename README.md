@@ -153,3 +153,8 @@ Laravel的优势<br>
 `chkconfig --list | grep mysqld`<br>
 `chkconfig mysqld on`<br>
 
+### composer安装
+- https://pkg.phpcomposer.com
+- 安装composer(https://pkg.phpcomposer.com/#how-to-install-composer)
+- 配置中国镜像(composer config -g repo.packagist composer https://packagist.phpcomposer.com)
+- 创建laravel项目(composer create-project laravel/laravel laravel54 "5.4.*"
