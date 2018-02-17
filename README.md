@@ -114,4 +114,17 @@ Laravel的优势<br>
 ```
 `make && make install`<br>
 
+配置服务<br>
+`cp php.ini-development /usr/local/php/etc/php.ini`<br>
+`cp /usr/local/php/etc/php-fpm.conf.default /usr/local/php/etc/php-fpm.conf`<br>
+`cp sapi/fpm/init.d.php-fpm /etc/init.d/php-fpm`<br>
+`chmod +x /etc/init.d/php-fpm`<br>
+`chkconfig --add php-fpm`<br>
+`chkconfig php-fpm`<br>
+`service php-fpm start`<br>
+
+环境变量<br>
+`vim /etc/profile`<br>
+`export PATH=$PATH:/usr/local/php/bin`<br>
+`source /etc/profile`<br>
 
