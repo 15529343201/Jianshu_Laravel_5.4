@@ -169,3 +169,9 @@ Laravel的优势<br>
 - 数据库管理:database
 - 对外资源:public
 
+### 修改.env数据库配置文件
+`DB_DATABASE=laravel54`<br>
+`DB_USERNAME=root`<br>
+`DB_PASSWORD=123456`<br>
+生成数据迁移表:<br>
+`php artisan migrate:install`<br>
