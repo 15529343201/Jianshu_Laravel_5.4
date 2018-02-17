@@ -163,4 +163,9 @@ Laravel的优势<br>
 - Nginx?Apache?(http://d.laravel-china.org/docs/5.4/installation)
 - php artisan serve
 
+### 文件夹介绍
+- 逻辑代码:app
+- 配置文件:config
+- 数据库管理:database
+- 对外资源:public
 
