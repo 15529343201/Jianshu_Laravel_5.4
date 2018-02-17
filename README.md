@@ -175,3 +175,7 @@ Laravel的优势<br>
 `DB_PASSWORD=123456`<br>
 生成数据迁移表:<br>
 `php artisan migrate:install`<br>
+
+### chapter4:文章模块
+![image](https://github.com/15529343201/Jianshu_Laravel_5.4/blob/chapter4/image/l4.PNG)
+
