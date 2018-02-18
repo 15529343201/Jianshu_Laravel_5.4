@@ -193,3 +193,32 @@ Route::put('/posts', '\App\Http\Controllers\PostController@index');
 </form>
 */
 ```
+
+路由参数<br>
+```PHP
+Route::get('/posts/{id}', '\App\Http\Controllers\PostController@index');
+function index($id)
+{
+  $id = 57;
+}
+```
+
+路由分组<br>
+```PHP
+Route::group(['prefix' => 'posts'], function(){
+  Route::put('/', '\App\Http\Controllers\PostController@index');
+  Route::put('/{id}', '\App\Http\Controllers\PostController@index');
+  Route::put('/create', '\App\Http\Controllers\PostController@index');
+});
+```
+
+绑定模型<br>
+```PHP
+// post => 表:posts => 主键:id
+Route::get('/posts/{post}', '\App\Http\Controllers\PostController@show');
+function show(\App\Post $post){
+  //.....
+}
+```
+
+
