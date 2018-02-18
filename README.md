@@ -221,4 +221,19 @@ function show(\App\Post $post){
 }
 ```
 
+### 文章路由
+- 文章列表
+- 添加文章
+- 编辑文章
+- 删除文章
+- 文章详情
 
+`php artisan help make:controller`<br>
+`php artisan make:controller PostController`<br>
+
+### Laravel的模板
+- 使用的是blade模板
+- 模板语法{{}} @if @foreach
+- 参数传递
+- 继承模型extends/section/yield/content
+- 引入视图include
