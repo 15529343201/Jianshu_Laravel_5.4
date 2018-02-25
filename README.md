@@ -251,6 +251,7 @@ function show(\App\Post $post){
 
 `php artisan make:migration create_posts_table`<br>
 `php artisan migrate`<br>
+```
 +------------+------------------+------+-----+---------+----------------+
 | Field      | Type             | Null | Key | Default | Extra          |
 +------------+------------------+------+-----+---------+----------------+
@@ -261,4 +262,5 @@ function show(\App\Post $post){
 | created_at | timestamp        | YES  |     | NULL    |                |
 | updated_at | timestamp        | YES  |     | NULL    |                |
 +------------+------------------+------+-----+---------+----------------+
+```
 <br>
