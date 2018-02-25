@@ -243,4 +243,22 @@ function show(\App\Post $post){
 - 提取footer
 - 提取nav
 
+### 文章模块数据表
+- 使用migrate创建数据表
+- 表名posts
+- 外键user_id
+- 时间created_at/updated_at
 
+`php artisan make:migration create_posts_table`<br>
+`php artisan migrate`<br>
++------------+------------------+------+-----+---------+----------------+
+| Field      | Type             | Null | Key | Default | Extra          |
++------------+------------------+------+-----+---------+----------------+
+| id         | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| title      | varchar(100)     | NO   |     |         |                |
+| content    | text             | NO   |     | NULL    |                |
+| user_id    | int(11)          | NO   |     | 0       |                |
+| created_at | timestamp        | YES  |     | NULL    |                |
+| updated_at | timestamp        | YES  |     | NULL    |                |
++------------+------------------+------+-----+---------+----------------+
+<br>
