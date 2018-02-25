@@ -237,3 +237,10 @@ function show(\App\Post $post){
 - 参数传递
 - 继承模型extends/section/yield/content
 - 引入视图include
+
+### 文章模块的页面模板调整
+- 提取layout
+- 提取footer
+- 提取nav
+
+
