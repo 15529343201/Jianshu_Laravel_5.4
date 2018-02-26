@@ -264,3 +264,67 @@ function show(\App\Post $post){
 +------------+------------------+------+-----+---------+----------------+
 ```
 <br>
+
+### 文章模块模型
+- ORM
+- 创建posts的模型
+- tinker的使用
+- 基本的增删改查
+
+创建模型:`php artisan make:model Post`<br>
+`php artisan tinker`<br>
+```
+>>> $post=new \App\Post();
+=> App\Post {#697}
+>>> $post->title="this is post3";
+=> "this is post3"
+>>> $post->content="this is post3 content";
+=> "this is post3 content"
+>>> $post->save();
+=> true
+```
+```
+>>> \App\Post::find(1);
+=> App\Post {#705
+     id: 1,
+     title: "this is post3",
+     content: "this is post3 content",
+     user_id: 0,
+     created_at: "2018-02-26 07:52:52",
+     updated_at: "2018-02-26 07:52:52",
+   }
+```
+```
+>>> \App\Post::where('title', 'this is post3')->first();
+=> App\Post {#711
+     id: 1,
+     title: "this is post3",
+     content: "this is post3 content",
+     user_id: 0,
+     created_at: "2018-02-26 07:52:52",
+     updated_at: "2018-02-26 07:52:52",
+   }
+>>> \App\Post::where('title', 'this is post3')->get();
+=> Illuminate\Database\Eloquent\Collection {#706
+     all: [
+       App\Post {#709
+         id: 1,
+         title: "this is post3",
+         content: "this is post3 content",
+         user_id: 0,
+         created_at: "2018-02-26 07:52:52",
+         updated_at: "2018-02-26 07:52:52",
+       },
+     ],
+   }
+```
+```
+修改:
+$post=\App\Post::find(1);
+$post->title = "this is post2";
+$post->save();
+```
+```
+删除:
+$post->delete();
+```
