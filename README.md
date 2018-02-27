@@ -337,3 +337,15 @@ $post->delete();
 - 字符截断
 - 分页
 
+数据填充<br>
+```PHP
+$factory->define(App\Post::class, function(Faker\Generator $faker){
+        return [
+            'title' => $faker->sentence(6),
+            'content' => $faker->paragraph(10),
+        ];
+});
+```
+`php artisan tinker`<br>
+`>>>factory(App\Post::class, 10)->make(); 只打印在屏幕上,并未插入数据库`<br>
+`>>>factory(App\Post::class, 20)->create();插入到数据库`<br>
