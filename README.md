@@ -349,3 +349,13 @@ $factory->define(App\Post::class, function(Faker\Generator $faker){
 `php artisan tinker`<br>
 `>>>factory(App\Post::class, 10)->make(); 只打印在屏幕上,并未插入数据库`<br>
 `>>>factory(App\Post::class, 20)->create();插入到数据库`<br>
+
+分页<br>
+```PHP
+public function index()
+{
+    $posts = Post::orderBy('created_at', 'desc')->paginate(6);
+    return view("post/index", compact('posts'));
+}
+```
+`{{$posts->links()}}`<br>
