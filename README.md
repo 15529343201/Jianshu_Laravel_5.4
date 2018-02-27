@@ -369,3 +369,11 @@ public function index()
 - 页面编写
 - 列表页补充
 
+### 文章添加逻辑
+- 控制器
+- csrf
+- 保存model
+- 验证和错误提示
+- 错误提示本地化
+
+`php artisan storage:link`<br>
