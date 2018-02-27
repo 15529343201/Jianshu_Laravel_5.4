@@ -328,3 +328,12 @@ $post->save();
 删除:
 $post->delete();
 ```
+
+### 文章列表逻辑
+- 模型查找
+- 页面渲染
+- 时间格式http://carbon.nesbot.com/docs/
+- 数据填充https://github.com/fzaninotto/Faker/
+- 字符截断
+- 分页
+
