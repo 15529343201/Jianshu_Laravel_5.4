@@ -359,3 +359,13 @@ public function index()
 }
 ```
 `{{$posts->links()}}`<br>
+
+字符截断<br>
+`{{str_limit($post->content, 100, '...')}}`<br>
+
+### 文章详情逻辑
+- 控制器
+- 路由绑定
+- 页面编写
+- 列表页补充
+
