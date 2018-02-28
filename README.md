@@ -444,3 +444,26 @@ public function index()
 ### 用户模块
 删除Auth Controller<br>
 
+### 路由和控制器
+- 登陆路由
+- 注册路由
+- 登陆控制器
+- 注册控制器
+- 个人设置
+
+### Auth门脸类
+- Auth门脸方法
+- Auth的配置文件流程
+
+```PHP
+if(Auth::attempt(['email' => $email, 'password' => $password], $remeber)) {
+  // 这个用户被记住了...
+}
+
+Auth::logout();
+// 获取当前已通过认证的用户...
+$user = Auth::user();
+// 获取当前已通过认证的用户id...
+$id = Auth::id();
+```
+
