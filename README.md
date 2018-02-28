@@ -440,3 +440,7 @@ public function index()
 `>>> app('Symfony\Component\HttpFoundation\Request')`<br>
 
 - https://laravel.com/api/5.4/
+
+### 用户模块
+删除Auth Controller<br>
+
