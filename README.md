@@ -379,7 +379,7 @@ public function index()
 `php artisan storage:link`<br>
 
 ### Laravel核心思想
-服务容器:<br>
+### 服务容器:<br>
 - 容器概念
 - IOC控制反转
 - DI依赖注入
@@ -402,3 +402,31 @@ $this->app->singleton('HelpSpot\API', function($app) {
 ```PHP
 $api = $this->app->make('HelpSpot\API');
 ```
+`bootstrap/app.php`<br>
+`public/index.php`<br>
+
+### 服务提供者
+- 概念
+- 服务提供注册
+- 延迟服务提供
+
+`public function register()`<br>
+`public function boot()`<br>
+`protected $defer = true;`<br>
+
+`config/app.php`<br>
+
+### 门脸模式
+- 静态调用
+
+```PHP
+public function index()
+{
+  $params = \Request::all();
+```
+
+- app.php -> aliases
+ 
+### 日志类
+![image](https://github.com/15529343201/Jianshu_Laravel_5.4/blob/chapter5/image/l6.PNG)
+
