@@ -429,3 +429,14 @@ public function index()
  
 ### 日志类
 ![image](https://github.com/15529343201/Jianshu_Laravel_5.4/blob/chapter5/image/16.PNG)
+
+### 如何查找一个门脸类或注入类有哪些函数
+- 门脸类
+
+`>>> app('request')`<br>
+
+- 注入类
+
+`>>> app('Symfony\Component\HttpFoundation\Request')`<br>
+
+- https://laravel.com/api/5.4/
