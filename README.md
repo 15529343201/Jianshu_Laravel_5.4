@@ -496,3 +496,45 @@ $this->authorize('update',$post);
 
 `php artisan make:policy PostPolicy`<br>
 
+### 评论模块
+`php artisan make:migration create_comments_table`<br>
+```PHP
++------------+------------------+------+-----+---------+----------------+
+| Field      | Type             | Null | Key | Default | Extra          |
++------------+------------------+------+-----+---------+----------------+
+| id         | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| post_id    | int(11)          | NO   |     | NULL    |                |
+| content    | text             | NO   |     | NULL    |                |
+| user_id    | int(11)          | NO   |     | NULL    |                |
+| created_at | timestamp        | YES  |     | NULL    |                |
+| updated_at | timestamp        | YES  |     | NULL    |                |
++------------+------------------+------+-----+---------+----------------+
+```
+
+### Laravel模型关联
+- 一对一 hasOne(用户-手机号)
+- 一对多 hasMany(文章-评论)
+- 一对多反向 belongsTo(评论-文章)
+- 多对多 belongsToMany(用户-角色)
+- 远层一对多 hasManyThrough(国家-作者-文章)
+- 多态关联 morphMany(文章/视频-评论)
+- 多态多对多 morphToMany(文章/视屏-标签)
+- 排序orderBy
+
+`php artisan make:model Comment`<br>
+
+### 评论列表逻辑
+- 模型关联预加载
+- 模板
+
+```PHP
+$books = App\Book::with('author')->get();
+$books->load('author','publisher');
+```
+
+### 文章列表页评论数
+- 模型关联计数
+
+```PHP
+$posts = App\Post::withCount('comments')->get();
+```
