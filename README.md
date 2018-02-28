@@ -467,3 +467,32 @@ $user = Auth::user();
 $id = Auth::id();
 ```
 
+### 用户授权Policy
+- 定义策略类
+- 注册策略类和模型关联
+
+```PHP
+if($user->can('update',$post)) {
+  //
+}
+
+@can('update',$post)
+  <!--当前用户可以更新博客-->
+@elsecan('create',$post)
+  <!--当前用户可以新建博客-->
+@endcan
+
+$this->authorize('update',$post);
+```
+
+- 策略判断
+
+### 相关认证权限
+- 文章创建增加用户
+- 控制器
+- Layout
+- 文章编辑权限
+- 退出
+
+`php artisan make:policy PostPolicy`<br>
+
