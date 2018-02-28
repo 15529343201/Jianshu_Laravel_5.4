@@ -428,5 +428,4 @@ public function index()
 - app.php -> aliases
  
 ### 日志类
-![image](https://github.com/15529343201/Jianshu_Laravel_5.4/blob/chapter5/image/l6.PNG)
-
+![image](https://github.com/15529343201/Jianshu_Laravel_5.4/blob/chapter5/image/16.PNG)
