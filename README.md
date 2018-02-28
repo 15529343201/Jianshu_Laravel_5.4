@@ -377,3 +377,28 @@ public function index()
 - 错误提示本地化
 
 `php artisan storage:link`<br>
+
+### Laravel核心思想
+服务容器:<br>
+- 容器概念
+- IOC控制反转
+- DI依赖注入
+
+Laravel中的容器:<br>
+- 绑定
+
+```PHP
+$this->app->bind("HelpSpot\API', function($app) {
+  return new HelpSpot\API($app->make('HttpClient'));
+});
+
+$this->app->singleton('HelpSpot\API', function($app) {
+  return new HelpSpot\API($app->make('HttpClient'));
+});
+```
+
+- 解析
+
+```PHP
+$api = $this->app->make('HelpSpot\API');
+```
