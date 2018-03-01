@@ -538,3 +538,20 @@ $books->load('author','publisher');
 ```PHP
 $posts = App\Post::withCount('comments')->get();
 ```
+
+### 赞模块
+`php artisan make:migration create_zans_table`<br>
+```PHP
++------------+------------------+------+-----+---------+----------------+
+| Field      | Type             | Null | Key | Default | Extra          |
++------------+------------------+------+-----+---------+----------------+
+| id         | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| post_id    | int(11)          | NO   |     | NULL    |                |
+| user_id    | int(11)          | NO   |     | NULL    |                |
+| created_at | timestamp        | YES  |     | NULL    |                |
+| updated_at | timestamp        | YES  |     | NULL    |                |
++------------+------------------+------+-----+---------+----------------+
+```
+
+`php artisan make:model Zan`<br>
+文章列表的喜欢数和评论数:withCount<br>
