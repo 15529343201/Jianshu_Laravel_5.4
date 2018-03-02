@@ -584,3 +584,14 @@ $posts = App\Post::withCount('comments')->get();
 Elasticsearch基本概念:<br>
 ![image](https://github.com/15529343201/Jianshu_Laravel_5.4/blob/chapter9/image/17.PNG)
 
+### 搜索模块实现基本步骤
+- 安装elasticsearch和ik插件
+- Elasticsearch和laravel scout包安装
+- 创建ylaravel的索引和模板
+- 导入数据库已有的数据
+- 搜索页面和逻辑展示
+
+elasticsearch安装:<br>
+- https://github.com/medcl/elasticsearch-rtf
+- 测试安装
+
