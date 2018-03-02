@@ -555,3 +555,32 @@ $posts = App\Post::withCount('comments')->get();
 
 `php artisan make:model Zan`<br>
 文章列表的喜欢数和评论数:withCount<br>
+
+### 搜索模块
+- 搜索设计
+
+&emsp;es介绍<br>
+&emsp;中文支持<br>
+&emsp;基本概念<br>
+
+- Es搭建
+
+&emsp;es搭建<br>
+&emsp;laravel相关<br>
+&emsp;模型关联<br>
+
+- 页面搭建
+- 业务逻辑
+
+&emsp;搜索逻辑<br>
+&emsp;分页<br>
+
+### 搜索设计
+- 搜索功能分析
+- Elasticsearch选取 https://www.elastic.co/cn/
+- Elasticsearch介绍
+- Elasticsearch中文支持 https://github.com/medcl/elasticsearch-analysis-ik
+
+Elasticsearch基本概念:<br>
+![image](https://github.com/15529343201/Jianshu_Laravel_5.4/blob/chapter9/image/17.PNG)
+
