@@ -598,7 +598,7 @@ elasticsearch安装:<br>
 安装jdk8:<br>
 1.切换到usr/local/src目录下:<br>
 `cd /usr/local/src`<br>
-下载jdk1.8的包:http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html<br<
+下载jdk1.8的包:http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html<br>
 2.下载完后解压tar包<br>
 `tar -zxvf jdk-8u152-linux-x64.tar.gz`<br>
 3.将解压后的文件夹剪切到usr/local目录下，并改名为jdk8<br>
@@ -614,3 +614,15 @@ elasticsearch安装:<br>
 `export JAVA_HOME JRE_HOME PATH CLASS_PATH`<br>
 追加完成后更新配置：`source /etc/profile`<br>
 查看是否安装成功：`java -version`<br>
+
+安装elasticsearch(内存要大于2G,否则会报错):<br>
+`bin/elasticsearch-plugin list`<br>
+删除不必要的插件:<br>
+`bin/elasticsearch-plugin list > /tmp/plugin.log`<br>
+`vim /tmp/plugin.log`去掉analysis-id<br>
+`cat /tmp/plugin.log|xargs -I {} bin/elasticsearch-plugin remove {}`<br>
+
+启动:`bin/elasticsearch -d`<br>
+`ps aux|grep java`<br>
+`cat logs/elasticsearch.log`<br>
+
