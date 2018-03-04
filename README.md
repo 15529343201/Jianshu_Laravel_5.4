@@ -595,3 +595,22 @@ elasticsearch安装:<br>
 - https://github.com/medcl/elasticsearch-rtf
 - 测试安装
 
+安装jdk8:<br>
+1.切换到usr/local/src目录下:<br>
+`cd /usr/local/src`<br>
+下载jdk1.8的包:http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html<br<
+2.下载完后解压tar包<br>
+`tar -zxvf jdk-8u152-linux-x64.tar.gz`<br>
+3.将解压后的文件夹剪切到usr/local目录下，并改名为jdk8<br>
+`mv jdk1.8_152 ../jdk8`<br>
+
+5.配置环境变量<br>
+`vim /etc/profile`<br>
+在该文件尾部追加如下代码：<br>
+`JAVA_HOME=/usr/local/jdk8`<br>
+`JRE_HOME=/usr/local/jdk8/jre`<br>
+`CLASS_PATH=.:$JAVA_HOME/lib`<br>
+`PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH`<br>
+`export JAVA_HOME JRE_HOME PATH CLASS_PATH`<br>
+追加完成后更新配置：`source /etc/profile`<br>
+查看是否安装成功：`java -version`<br>
