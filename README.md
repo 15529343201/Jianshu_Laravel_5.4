@@ -626,3 +626,9 @@ elasticsearch安装:<br>
 `ps aux|grep java`<br>
 `cat logs/elasticsearch.log`<br>
 
+安装laravel使用的elastic的包<br>
+- 安装laravel/scout(http://d.laravel-china.org/docs/5.4/scout)
+- 安装scout的es驱动(https://github.com/ErickTamayo/laravel-scout-elastic)
+- 修改scout.php
+
+
