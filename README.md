@@ -652,3 +652,15 @@ Laravel自定义命令行<br>
 
 导入数据:`php artisan scout:import "\App\Post"`<br>
 
+### 个人中心模块
+- 表设计
+
+&emsp;表设计<br>
+&emsp;模型<br>
+
+- 页面搭建
+- 业务逻辑
+
+&emsp;路由<br>
+&emsp;控制器<br>
+&emsp;js<br>
