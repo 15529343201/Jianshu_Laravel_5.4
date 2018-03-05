@@ -650,4 +650,5 @@ Laravel自定义命令行<br>
 - 导入post数据
 - 测试新增删除数据
 
+导入数据:`php artisan scout:import "\App\Post"`<br>
 
