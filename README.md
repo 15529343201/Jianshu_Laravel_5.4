@@ -631,4 +631,23 @@ elasticsearch安装:<br>
 - 安装scout的es驱动(https://github.com/ErickTamayo/laravel-scout-elastic)
 - 修改scout.php
 
+Laravel自定义命令行<br>
+- 创建Command
+- 编辑handle
+- 挂载
+
+自定义脚本创建es的index和template<br>
+- laravel自定义脚本介绍
+- 创建index
+- 创建template
+
+`php artisan make:command ESInit`<br>
+`composer require guzzlehttp/guzzle`<br>
+`php artisan es:init`<br>
+
+### 导入POST数据
+- 修改POST的模型
+- 导入post数据
+- 测试新增删除数据
+
 
