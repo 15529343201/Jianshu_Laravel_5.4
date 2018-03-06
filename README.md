@@ -715,3 +715,29 @@ Laravel自定义命令行<br>
 
 `php artisan make:model Topic`<br>
 `php artisan make:model PostTopic`<br>
+`php artisan make:controller TopicController`<br>
+
+### 页面逻辑-公共专题列表
+- 视图合成器
+
+```PHP
+// Using Closure based composers...
+View::composer('dashboard',function($view){
+  //
+});
+```
+
+### 模型的scope
+- 定义
+
+```PHP
+public function scopeActive($query)
+{
+  return $query->where('active',1);
+}
+```
+- 使用
+
+```PHP
+$users = App\User::popular()->active()->orderBy('created_at')->get()
+```
