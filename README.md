@@ -688,3 +688,30 @@ Laravel自定义命令行<br>
 - JS编写
 - 相关链接
 
+### 专题模块
+`php artisan make:migration create_topics_table`<br>
+`php artisan make:migration create_post_topic_table`<br>
+```
++------------+------------------+------+-----+---------+----------------+
+| Field      | Type             | Null | Key | Default | Extra          |
++------------+------------------+------+-----+---------+----------------+
+| id         | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| name       | varchar(30)      | NO   |     |         |                |
+| created_at | timestamp        | YES  |     | NULL    |                |
+| updated_at | timestamp        | YES  |     | NULL    |                |
++------------+------------------+------+-----+---------+----------------+
+```
+```
++------------+------------------+------+-----+---------+----------------+
+| Field      | Type             | Null | Key | Default | Extra          |
++------------+------------------+------+-----+---------+----------------+
+| id         | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| post_id    | int(11)          | NO   |     | 0       |                |
+| topic_id   | int(11)          | NO   |     | 0       |                |
+| created_at | timestamp        | YES  |     | NULL    |                |
+| updated_at | timestamp        | YES  |     | NULL    |                |
++------------+------------------+------+-----+---------+----------------+
+```
+
+`php artisan make:model Topic`<br>
+`php artisan make:model PostTopic`<br>
