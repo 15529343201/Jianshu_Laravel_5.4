@@ -664,3 +664,27 @@ Laravel自定义命令行<br>
 &emsp;路由<br>
 &emsp;控制器<br>
 &emsp;js<br>
+
+`php artisan make:migration create_fans_table`<br>
+`php artisan make:model Fan`<br>
+
+### 模型逻辑
+- 获取某个用户关注数
+- 获取某个用户的关注用户列表stars
+- 获取某个用户粉丝数
+- 获取某个用户的粉丝用户列表fans
+- 获取某个用户文章数
+- 获取某个用户的文章列表posts
+- 我是否已经关注某个用户hasStar
+- 我是否被某个用户关注hasFan
+- 增加我对某个用户的关注doFan
+- 取消我对某个用户的关注doUnfan
+- 通过Fan获取关注用户信息fuser
+- 通过Fan获取粉丝用户信息suser
+
+### 页面逻辑
+- 控制器
+- 页面
+- JS编写
+- 相关链接
+

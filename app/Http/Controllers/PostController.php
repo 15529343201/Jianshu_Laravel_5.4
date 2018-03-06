@@ -36,7 +36,7 @@ class PostController extends Controller
       $this->validate(request(),[
 	'title' => 'required|string|max:100|min:5',
 	'content' => 'required|string|min:10',
-]);
+      ]);
       
       // 逻辑
       $user_id=\Auth::id();

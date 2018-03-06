@@ -10,7 +10,7 @@
 		    </a>
 		    @endcan
                     @can('delete',$post)
-                                                           <a style="margin: auto"  href="/posts/{{$post->id}}/delete">
+                    <a style="margin: auto"  href="/posts/{{$post->id}}/delete">
                         <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
 		    </a>
                     @endcan
@@ -56,7 +56,7 @@
 		    {{csrf_field()}}
                     <li class="list-group-item">
 			<textarea name="content" class="form-control" rows="10"></textarea>
-                        @include("layout.error")
+                        @include('layout.error')
                         <button class="btn btn-default" type="submit">提交</button>
                     </li>
                 </form>
