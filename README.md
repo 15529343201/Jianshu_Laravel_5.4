@@ -741,3 +741,17 @@ public function scopeActive($query)
 ```PHP
 $users = App\User::popular()->active()->orderBy('created_at')->get()
 ```
+
+文章和专题相关scope:<br>
+- 属于某个作者的文章
+- 不在某个topic中的文章
+
+其他模型关联<br>
+- 专题的文章列表
+- 专题的文章数
+
+页面逻辑-专题详情页<br>
+- 控制器
+- 专题模块
+
+
