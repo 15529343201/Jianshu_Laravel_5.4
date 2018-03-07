@@ -754,4 +754,8 @@ $users = App\User::popular()->active()->orderBy('created_at')->get()
 - 控制器
 - 专题模块
 
+页面逻辑-投稿逻辑<br>
+- 控制器
+- 表单提交
+
 
