@@ -775,3 +775,29 @@ $users = App\User::popular()->active()->orderBy('created_at')->get()
 &emsp;路由<br>
 &emsp;验证<br>
 &emsp;登录/登出<br>
+
+### 嵌入adminlte
+- https://github.com/almasaeed2010/AdminLTE/
+- composer require "almasaeed2010/adminlte=~2.0"
+
+http://jianshu_laravel_5.4/adminlte/index.html可以看到效果<br>
+
+### 后台表设计
+`php artisan make:migration create_admin_users_table`<br>
+```
++------------+------------------+------+-----+---------+----------------+
+| Field      | Type             | Null | Key | Default | Extra          |
++------------+------------------+------+-----+---------+----------------+
+| id         | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| name       | varchar(30)      | NO   |     | NULL    |                |
+| password   | varchar(100)     | NO   |     | NULL    |                |
+| created_at | timestamp        | YES  |     | NULL    |                |
+| updated_at | timestamp        | YES  |     | NULL    |                |
++------------+------------------+------+-----+---------+----------------+
+```
+`php artisan make:model AdminUser`<br>
+
+### 管理员登录-用户认证
+- 定义后台auth-grard
+- 定义后台auth-provider
+- 路由修改
