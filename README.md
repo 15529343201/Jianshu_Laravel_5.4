@@ -758,4 +758,20 @@ $users = App\User::popular()->active()->orderBy('created_at')->get()
 - 控制器
 - 表单提交
 
+### 后台基础框架
+- 后台设计
 
+&emsp;目录<br>
+&emsp;模板<br>
+&emsp;数据库<br>
+
+- 首页
+
+&emsp;路由<br>
+&emsp;模板layout<br>
+
+- 登录
+
+&emsp;路由<br>
+&emsp;验证<br>
+&emsp;登录/登出<br>
