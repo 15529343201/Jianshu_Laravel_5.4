@@ -38,5 +38,9 @@ Route::group(['prefix'=>'admin'],function(){
       Route::get("/posts",'\App\Admin\Controllers\PostController@index');
       Route::post("/posts/{post}/status",'\App\Admin\Controllers\PostController@status');
     });
+    
+    Route::group(['middleware'=>'can:post'],function(){
+      Route::resource('topics','\App\Admin\Controllers\TopicController',['only'=>['index','create','store','destroy']]);
+    });
   });
 });
