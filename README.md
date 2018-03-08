@@ -828,4 +828,25 @@ http://jianshu_laravel_5.4/adminlte/index.html可以看到效果<br>
 - 删除操作
 - js
 
+### laravel的软删除
+- 表修改
+- 文章模型修改(匿名全局范围)
+-文章模块修改
+
+`php artisan make:migration alter_posts_table`<br>
+```
+mysql> desc posts;
++------------+------------------+------+-----+---------+----------------+
+| Field      | Type             | Null | Key | Default | Extra          |
++------------+------------------+------+-----+---------+----------------+
+| id         | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| title      | varchar(100)     | NO   |     |         |                |
+| content    | text             | NO   |     | NULL    |                |
+| user_id    | int(11)          | NO   |     | 0       |                |
+| created_at | timestamp        | YES  |     | NULL    |                |
+| updated_at | timestamp        | YES  |     | NULL    |                |
+| status     | tinyint(4)       | NO   |     | 0       |                |
++------------+------------------+------+-----+---------+----------------+
+```
+
 
