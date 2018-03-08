@@ -854,10 +854,23 @@ mysql> desc posts;
 `php artisan make:model AdminRole`<br>
 `php artisan make:model AdminPermission`<br>
 
-### 魔性关联-用户篇
+### 模性关联-用户篇
 - 用户有哪些角色
 - 用户是否有某个角色
 - 用户是否有某个权限
 - 给用户分配角色
 - 删除用户的某个角色
 
+### 模型关联-角色篇
+- 当前用户的所有权限
+- 给角色授予权限
+- 取消角色的权限
+- 角色是否有权限
+
+### 权限篇
+- 权限属于哪个角色
+
+### Gate
+- 注册Gate
+- 路由权限限制
+- 左边栏
