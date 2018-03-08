@@ -886,4 +886,5 @@ mysql> desc posts;
 - 增加专题操作
 - 删除专题操作
 
+![image](https://github.com/15529343201/Jianshu_Laravel_5.4/blob/chapter16/image/18.PNG)<br>
 
