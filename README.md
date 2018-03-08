@@ -849,4 +849,15 @@ mysql> desc posts;
 +------------+------------------+------+-----+---------+----------------+
 ```
 
+### 权限管理
+`php artisan make:migration create_permission_and_roles`<br>
+`php artisan make:model AdminRole`<br>
+`php artisan make:model AdminPermission`<br>
+
+### 魔性关联-用户篇
+- 用户有哪些角色
+- 用户是否有某个角色
+- 用户是否有某个权限
+- 给用户分配角色
+- 删除用户的某个角色
 
