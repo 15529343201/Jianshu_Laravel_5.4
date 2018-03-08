@@ -801,3 +801,16 @@ http://jianshu_laravel_5.4/adminlte/index.html可以看到效果<br>
 - 定义后台auth-grard
 - 定义后台auth-provider
 - 路由修改
+
+### 管理人员模块
+路由<br>
+- 列表
+- 创建页
+- 创建
+
+逻辑<br>
+- 列表
+- 创建页
+- 创建
+
+
