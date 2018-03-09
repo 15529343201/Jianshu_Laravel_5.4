@@ -963,3 +963,7 @@ mysql> desc jobs;
 `php artisan make:job SendMessage`<br>
 启动队列:`php artisan queue:work`<br>
 让其在后台启动:`nohup php artisan queue:work >> /dev/null &`<br>
+
+### Laravel的预加载
+- 定义
+- 使用(with/load)
