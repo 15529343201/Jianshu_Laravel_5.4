@@ -937,4 +937,29 @@ mysql> desc user_notice;
 - 启动任务
 - 系统通知队列的实际实现
 
+### 使用数据库队列发送通知
+- 修改驱动为database
+- 创建database的queue表
+- 创建任务SendMessage
+- 创建发送逻辑dispatch
+- 启动队列
 
+.env修改QUEUE_DRIVER=database<br>
+`php artisan queue:table`<br>
+```
+mysql> desc jobs;
++--------------+---------------------+------+-----+---------+----------------+
+| Field        | Type                | Null | Key | Default | Extra          |
++--------------+---------------------+------+-----+---------+----------------+
+| id           | bigint(20) unsigned | NO   | PRI | NULL    | auto_increment |
+| queue        | varchar(191)        | NO   | MUL | NULL    |                |
+| payload      | longtext            | NO   |     | NULL    |                |
+| attempts     | tinyint(3) unsigned | NO   |     | NULL    |                |
+| reserved_at  | int(10) unsigned    | YES  |     | NULL    |                |
+| available_at | int(10) unsigned    | NO   |     | NULL    |                |
+| created_at   | int(10) unsigned    | NO   |     | NULL    |                |
++--------------+---------------------+------+-----+---------+----------------+
+```
+`php artisan make:job SendMessage`<br>
+启动队列:`php artisan queue:work`<br>
+让其在后台启动:`nohup php artisan queue:work >> /dev/null &`<br>

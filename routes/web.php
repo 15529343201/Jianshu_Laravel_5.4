@@ -53,8 +53,11 @@ Route::post('/user/{user}/unfan', '\App\Http\Controllers\UserController@unfan');
 
 // 专题详情页
 Route::get('/topic/{topic}', '\App\Http\Controllers\TopicController@show');
+// 投稿
 Route::post('/topic/{topic}/submit', '\App\Http\Controllers\TopicController@submit');
 
+// 通知
+Route::get('/notices','\App\Http\Controllers\NoticeController@index');
 include_once('admin.php');
 
 
