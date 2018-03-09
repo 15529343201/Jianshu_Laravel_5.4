@@ -888,3 +888,16 @@ mysql> desc posts;
 
 ![image](https://github.com/15529343201/Jianshu_Laravel_5.4/blob/chapter16/image/18.PNG)<br>
 
+### 系统通知模块
+分析<br>
+- 表和模型
+- 同步异步
+- laravel队列
+
+页面<br>
+- 后台
+- 前台
+
+逻辑<br>
+- 后台
+- 前台
