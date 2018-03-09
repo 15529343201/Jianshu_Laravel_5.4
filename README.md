@@ -901,3 +901,40 @@ mysql> desc posts;
 逻辑<br>
 - 后台
 - 前台
+
+`php artisan make:migration create_notice_table`<br>
+```
+mysql> desc notices;
++------------+------------------+------+-----+---------+----------------+
+| Field      | Type             | Null | Key | Default | Extra          |
++------------+------------------+------+-----+---------+----------------+
+| id         | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| title      | varchar(50)      | NO   |     |         |                |
+| content    | varchar(1000)    | NO   |     |         |                |
+| created_at | timestamp        | YES  |     | NULL    |                |
+| updated_at | timestamp        | YES  |     | NULL    |                |
++------------+------------------+------+-----+---------+----------------+
+```
+```
+mysql> desc user_notice;
++------------+------------------+------+-----+---------+----------------+
+| Field      | Type             | Null | Key | Default | Extra          |
++------------+------------------+------+-----+---------+----------------+
+| id         | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| user_id    | int(11)          | NO   |     | 0       |                |
+| notice_id  | int(11)          | NO   |     | 0       |                |
+| created_at | timestamp        | YES  |     | NULL    |                |
+| updated_at | timestamp        | YES  |     | NULL    |                |
++------------+------------------+------+-----+---------+----------------+
+```
+
+`php artisan make:model Notice`<br>
+
+### Lavavel中的队列
+- 驱动
+- 定义任务
+- 分发任务
+- 启动任务
+- 系统通知队列的实际实现
+
+
